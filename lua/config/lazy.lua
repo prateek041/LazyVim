@@ -11,9 +11,12 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin",
     } },
+    { "catppuccin/nvim", as = "catppuccin" },
+    { "rebelot/kanagawa.nvim", as = "kanagawa" },
     { "rose-pine/neovim", as = "rose-pine" },
+    { "neanias/everforest-nvim", as = "everforest" },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -35,7 +38,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "tokyonight", "habamax", "catppuccin" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
